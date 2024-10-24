@@ -22,7 +22,7 @@ To download necessary node modules:
 
    	npm i
     
-To Start and Run Your React Application Weather Application: 
+To Start and Run Your React Weather Application: 
 
     npm run dev
 
