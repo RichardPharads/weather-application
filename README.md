@@ -1,5 +1,6 @@
 # weather-application
-Weather application of workshop
+
+Weather application Generative Ai WorkShop
 
 In your Terminal bash this script: 
 
@@ -13,14 +14,15 @@ After Cloning Weather Application Repository, Switch to Master Branch:
 
 	git checkout master
 
-Then Pull the necessary File : 
+Then Pull the Repository: 
 
   	git pull origin master
    
-To download necessary node modules :
+To download necessary node modules:
 
    	npm i
-To Start and Run Your React Application Weather Application : 
+    
+To Start and Run Your React Application Weather Application: 
 
     npm run dev
 
