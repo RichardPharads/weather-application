@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Data from './Datacard';
 
+const own_api = ""
+const APIKEY = import.meta.env.VITE_API_KEY || own_api
+// https://home.openweathermap.org/users/sign_in //
+//Get your API KEY here!//
+
 function MyComponent() {
+
+
     const [location, setLocation] = useState('manila');
     const [weatherData, setWeatherData] = useState({
         country: '',
@@ -13,7 +20,7 @@ function MyComponent() {
     useEffect(() => {
         const weatherApp = async () => {
             try {
-                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=bbc0f7e630de64177deea4c008e1beed`);
+                const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${APIKEY}`);
                 const data = await response.json();
                 console.log(data);
                 setWeatherData({
@@ -44,6 +51,7 @@ function MyComponent() {
             <div className='flex gap-4'>
                 <Data weatherData={weatherData} />
             </div>
+           
         </div>
     );
 }

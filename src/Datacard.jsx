@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 
 function Data({ weatherData}) {
-
+   
 
 
     return (
@@ -11,7 +11,7 @@ function Data({ weatherData}) {
                  <h1 className="font-semibold text-3xl mb-3 ">{weatherData.country}</h1>
                  <h1 className="font-semibold text-3xl mb-3 ">{weatherData.country_tag}</h1>
             </div>
-            
+       
 
             <div className={`w-custom-width  h-60 relative p-5 bg-slate-700 bg-center border-4 border-white gap-3 rounded-xl flex justify-center items-center overflow-hidden`}>
                 <img className="absolute w-full" src={`./src/assets/${weatherData.main}.png`} alt="" />
