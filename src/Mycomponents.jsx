@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Data from './Datacard';
 
-const own_api = ""
+const own_api = "bbc0f7e630de64177deea4c008e1beed"
 const APIKEY = import.meta.env.VITE_API_KEY || own_api
 // https://home.openweathermap.org/users/sign_in //
 //Get your API KEY here!//
