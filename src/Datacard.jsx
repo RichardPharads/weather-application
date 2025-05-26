@@ -1,33 +1,33 @@
 import React, { useState, useEffect } from "react";
-
-const clear = './src/assets/clear.png'
-const clouds = './src/assets/clouds.png'
-const drizzle = './src/assets/drizzel.png'
-const rain = './src/assets/rain.png'
-const snow = './src/assets/snow.png'
-const thunder = './src/assets/thunder.png'
+import clearImg from './assets/clear.png';
+import cloudsImg from './assets/clouds.png';
+import drizzleImg from './assets/drizzel.png';
+import rainImg from './assets/rain.png';
+import snowImg from './assets/snow.png';
+import thunderImg from './assets/thunder.png';
 
 function getWeatherImage(weatherCondition) {
     switch(weatherCondition.toLowerCase()) {
         case 'clear':
-            return clear;
+            return clearImg;
         case 'clouds':
-            return clouds;
+            return cloudsImg;
         case 'drizzle':
-            return drizzle;
+            return drizzleImg;
         case 'rain':
-            return rain;
+            return rainImg;
         case 'snow':
-            return snow;
-        case 'thuner':
-            return thunder;
+            return snowImg;
+        case 'thunder':
+            return thunderImg;
         default:
-            return clear; // default image if weather condition doesn't match
+            return clearImg; // default image if weather condition doesn't match
     }
 }
 
 function Data({ weatherData}) {
-  
+
+
     const weatherImage = getWeatherImage(weatherData.main);
 
     return (
