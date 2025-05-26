@@ -27,6 +27,7 @@ function getWeatherImage(weatherCondition) {
 }
 
 function Data({ weatherData}) {
+  
     const weatherImage = getWeatherImage(weatherData.main);
 
     return (
@@ -42,7 +43,10 @@ function Data({ weatherData}) {
 
                 <div className="w-5/12 h-full z-10  bg-black backdrop-blur-sm bg-opacity-60 rounded-xl p-5">
                     <div>
-                      <img src={weatherImage} alt="weather icon" />
+                        {
+                            weatherData.main &&  <img src={weatherImage} alt="weather icon" />
+                        }
+                     
                     </div>
                 </div>
 
