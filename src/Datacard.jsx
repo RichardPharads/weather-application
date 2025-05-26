@@ -1,25 +1,30 @@
 import React, { useState, useEffect } from "react";
-import './assets/clear.png'
-import './assets/clouds.png'
-import './assets/drizzel.png'
-import './assets/rain.png'
+
+const clear = './src/assets/clear.png'
+const clouds = './src/assets/clouds.png'
+const drizzle = './src/assets/drizzel.png'
+const rain = './src/assets/rain.png'
+const snow = './src/assets/snow.png'
+const thunder = './src/assets/thunder.png'
 
 function getWeatherImage(weatherCondition) {
     switch(weatherCondition.toLowerCase()) {
         case 'clear':
-            return 'clear';
+            return clear;
         case 'clouds':
-            return 'clouds';
+            return clouds;
         case 'drizzle':
-            return 'drizzel';
+            return drizzle;
         case 'rain':
-            return 'rain';
+            return rain;
+        case 'snow':
+            return snow;
+        case 'thuner':
+            return thunder;
         default:
-            return 'clear'; // default image if weather condition doesn't match
+            return clear; // default image if weather condition doesn't match
     }
 }
-
-const rain = 'rain'
 
 function Data({ weatherData}) {
     const weatherImage = getWeatherImage(weatherData.main);
@@ -33,11 +38,11 @@ function Data({ weatherData}) {
        
 
             <div className={`w-custom-width  h-60 relative p-5 bg-slate-700 bg-center border-4 border-white gap-3 rounded-xl flex justify-center items-center overflow-hidden`}>
-                <img className="absolute w-full" src={`./src/assets/${weatherImage}.png`} alt="" />
+                <img className="absolute w-full" src={weatherImage} alt="weather background" />
 
                 <div className="w-5/12 h-full z-10  bg-black backdrop-blur-sm bg-opacity-60 rounded-xl p-5">
                     <div>
-                      <img src={`./src/assets/${weatherData.main}.png`} alt="" />
+                      <img src={weatherImage} alt="weather icon" />
                     </div>
                 </div>
 
